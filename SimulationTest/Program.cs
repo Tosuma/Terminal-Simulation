@@ -14,6 +14,8 @@ class Program
     public static void Main()
     {
         Program sim = new Program();
+        Console.SetWindowSize(sim.Width, sim.Height);
+        Console.Clear();
         string line = sim.DrawLine();
         Console.WriteLine(line);
 
