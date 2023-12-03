@@ -8,7 +8,20 @@ namespace SimulationTest
 {
     public class Ball
     {
-        public (double x, double y) Pos = (0.0, 0.0);
-        public (double x, double y) Vel = (15.0, 20.0);
+        public (double x, double y) Pos;
+        public (double x, double y) Vel;
+        public (double x, double y) PrevPos;
+        public double TimeStep;
+
+        public Ball(double px, double py, double vx, double vy, double timeStep)
+        {
+            Pos.x = px;
+            Pos.y = py;
+            PrevPos.x = px;
+            PrevPos.y = py;
+            Vel.x = vx;
+            Vel.y = vy;
+            TimeStep = timeStep;
+        }
     }
 }
